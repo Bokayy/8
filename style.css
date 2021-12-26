@@ -1,0 +1,108 @@
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+main{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(fallout_wallpaper.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: inline;
+    justify-content: space-around;
+}
+
+.row{
+    display: flex; 
+    /* ne ide kao inline-flex, niti kao flex-direction row
+    jer to već parent div sa klasom row definira kao row */
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.input-group{
+    position: relative;
+    /* omogućuje nam da text izmaknemo down the line */
+    /* padding: 0.8rem; */
+    margin: 0.8rem 0rem 0rem 0rem;
+    /* inace bi trebalo biti margin-bottom: 30px, no meni radi sa obicnim marginom */
+}
+
+.row .input-group{
+    /* input groups samo pod parentom row */
+    flex-basis: 48%;
+    /* opet, služi za problem spojenih "Ime" i "Broj" inputa */
+}
+
+input,
+textarea{
+    width: 100%;
+    /* 100% usporedno širini containera */
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+/* .input-group > input{
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    border: 1px dotted;
+    outline:none;
+    height:30px;
+    transition:height 1s;
+    -webkit-transition:height 1s;
+} */
+
+/* .input-group >input:focus {
+    height:50px;
+    font-size:16px;
+} */
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    padding: 10px;
+    height: 100%;
+    cursor: text;
+    transition: all 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+    pointer-events: none
+}
+
+button{
+    /* color: black !important; */
+    padding: 1rem 12.1rem;
+    outline: 0;
+    background: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    transform: translateY(-2.5rem);
+    /* 0.75rem */
+}
+
+input:focus > label > #E-mail,
+input:valid > label > #E-mail{
+    transform: translateX(-5.5rem);
+}
+
+textarea:focus ~ label,
+textarea:valid ~ label{
+    transform: translateX(-9rem);
+    /* font-size: 75%; */
+}

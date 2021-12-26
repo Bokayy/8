@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt forma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb801bc08c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <form >
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="text"><i class="fas fa-user"></i> Ime</label>
+                </div> 
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="tel" id="tel"><i class="fas fa-phone"></i> Broj</label>
+                </div> 
+            </div>
+            <div>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="text" id="#E-mail"><i class="fas fa-envelope"></i> E-mail</label>
+                </div> 
+                <div class="input-group">
+                    <textarea name="message" rows="10" required></textarea>
+                    <label for="message"><i class="fas fa-comment"></i> Vaša poruka</label>
+                </div>
+            </div>
+            <button type="submit">Pošalji <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </main>
+</body>
+</html>
